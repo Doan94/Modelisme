@@ -7,8 +7,9 @@
 </head>
 <body>
     <section>
+    
         <h1>Bons de commande</h1>
-
+        <a href="create_orders.php" class="button btn-warning">Creation de bon de commande</a></br>
         <table class="standard-table">
             <caption>Liste des commandes</caption>
             <thead>
