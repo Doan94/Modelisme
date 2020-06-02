@@ -11,44 +11,64 @@
 <!-- Formulaire de saisie d'un nouveau client -->
 <form class="generic-form" action="create_orders.php" method="post">
     <fieldset>
-        <legend><i class="fa fa-sticky-note-o"></i> Nouveau bon de commande</legend>
+        <legend><i class="fa fa-sticky-note-o"></i> Nouveau client :</legend>
         
         <ul>
             <li>
-                <label for="orderNumber">Numéro de commande :</label>
-                <input type="number" id="orderNumber" name="orderNumber">
+                <label for="customerNumber">Numéro de client :</label>
+                <input type="number" id="customerNumber" name="customerNumber">
             </li>
             <li>
-                <label for="quantityOrdered">Quantité :</label>
-                <input type="number" id="quantityOrdered" name="quantityOrdered">
+                <label for="customerName">Mail :</label>
+                <input type="text" id="customerName" name="customerName">
             </li>
             <li>
-                <label for="priceEach">Prix unitaire :</label>
-                <input type="number" id="priceEach" name="priceEach">
+                <label for="customerLastName">Nom :</label>
+                <input type="text" id="customerLastName" name="customerLastName">
             </li>
             <li>
-                <label for="orderLineNumber">Ordre de commande :</label>
-                <input type="number" id="orderLineNumber" name="orderLineNumber">
+                <label for="customerFirstName">Prénom :</label>
+                <input type="text" id="customerFirstName" name="customerFirstName">
             </li>
             <li>
-                <label for="status">Statut :</label>
-                <input type="text" id="status" name="status">
+                <label for="phone">Téléphone :</label>
+                <input type="text" id="phone" name="phone">
             </li>
             <li>
-                <label for="customer">Client :</label>
-                <select id="customer" name="customer">
-                    <?php foreach($customers as $customer): ?>
-                        <option value="<?= intval($customer['customerNumber']) ?>"><?= htmlspecialchars($customer['customerName']) ?> <?= htmlspecialchars($customer['contactFirstName']) ?> <?= htmlspecialchars($customer['contactLastName']) ?></option>
+                <label for="addressLine1">Adresse :</label>
+                <input type="text" id="addressLine1" name="addressLine1">
+            </li>
+            <li>
+                <label for="addressLine2">Complément d'adresse :</label>
+                <input type="text" id="addressLine2" name="addressLine2">
+            </li>
+            <li>
+                <label for="city">Ville :</label>
+                <input type="text" id="city" name="city">
+            </li>
+            <li>
+                <label for="state">Région :</label>
+                <input type="text" id="state" name="state">
+            </li>
+            <li>
+                <label for="postalCode">Code postal :</label>
+                <input type="text" id="postalCode" name="postalCode">
+            </li>
+            <li>
+                <label for="country">Pays :</label>
+                <input type="text" id="country" name="country">
+            </li>
+            <li>
+                <label for="employee">Client :</label>
+                <select id="employee" name="employee">
+                    <?php foreach($employees as $employee): ?>
+                        <option value="<?= intval($employee['salesRepEmployeeNumber']) ?>"><?= htmlspecialchars($employee['lastName']) ?> <?= htmlspecialchars($employee['firstName']) ?></option>
                     <?php endforeach ?>
                 </select>
             </li>
             <li>
-                <label for="product">Produit :</label>
-                <select id="product" name="product">
-                    <?php foreach($products as $product): ?>
-                        <option value="<?= $product['productCode'] ?>"><?= htmlspecialchars($product['productCode']) ?> <?= htmlspecialchars($product['productName']) ?> </option>
-                    <?php endforeach ?>
-                </select>
+            <label for="creditLimit">Limite de crédit :</label>
+                <input type="text" id="creditLimit" name="creditLimit">
             </li>
             <li>
                 <button class="button button-primary" type="submit">Enregistrer</button>
