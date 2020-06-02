@@ -9,7 +9,7 @@
 <h2 class="indextitle" >Ajouter un nouveau client</h2>
 
 <!-- Formulaire de saisie d'un nouveau client -->
-<form class="generic-form" action="create_orders.php" method="post">
+<form class="generic-form" action="create_customer.php" method="post">
     <fieldset>
         <legend><i class="fa fa-sticky-note-o"></i> Nouveau client :</legend>
         
@@ -23,12 +23,12 @@
                 <input type="text" id="customerName" name="customerName">
             </li>
             <li>
-                <label for="customerLastName">Nom :</label>
-                <input type="text" id="customerLastName" name="customerLastName">
+                <label for="contactLastName">Nom :</label>
+                <input type="text" id="contactLastName" name="contactLastName">
             </li>
             <li>
-                <label for="customerFirstName">Prénom :</label>
-                <input type="text" id="customerFirstName" name="customerFirstName">
+                <label for="contactFirstName">Prénom :</label>
+                <input type="text" id="contactFirstName" name="contactFirstName">
             </li>
             <li>
                 <label for="phone">Téléphone :</label>
@@ -59,8 +59,8 @@
                 <input type="text" id="country" name="country">
             </li>
             <li>
-                <label for="employee">Client :</label>
-                <select id="employee" name="employee">
+                <label for="salesRepEmployeeNumber">Client :</label>
+                <select id="salesRepEmployeeNumber" name="salesRepEmployeeNumber">
                     <?php foreach($employees as $employee): ?>
                         <option value="<?= intval($employee['employeeNumber']) ?>"><?= htmlspecialchars($employee['lastName']) ?> <?= htmlspecialchars($employee['firstName']) ?></option>
                     <?php endforeach ?>

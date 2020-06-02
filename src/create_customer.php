@@ -4,7 +4,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=classicmodels', 'root', 'root');
 
 // Paramétrage de la liaison PHP <-> MySQL, les données sont encodées en UTF-8.
 $pdo->exec('SET NAMES UTF8');
-
+print_r("debug " . $_POST) ;
 if(empty($_POST))
     {
         // Récupération de tous les clients du site.
@@ -48,7 +48,7 @@ if(empty($_POST))
          print_r($_POST['salesRepEmployeeNumber']." ");
          print_r($_POST['creditLimit']." ");
          print_r($_POST) ;
-         $resultSet3->execute([$_POST['customerNumber'], $_POST['customerName'], $_POST['customerLastName'], $_POST['contactFirstName'], $_POST['phone'], $_POST['addressLine1'], $_POST['addressLine2'], $_POST['city'], $_POST['state'], $_POST['postalCode'], $_POST['country'], $_POST['salesRepEmployeeNumber'], $_POST['creditLimit']]);
+         $resultSet3->execute([$_POST['customerNumber'], $_POST['customerName'], $_POST['contactLastName'], $_POST['contactFirstName'], $_POST['phone'], $_POST['addressLine1'], $_POST['addressLine2'], $_POST['city'], $_POST['state'], $_POST['postalCode'], $_POST['country'], $_POST['salesRepEmployeeNumber'], $_POST['creditLimit']]);
          //$resultSet3->execute(array('10427', 'commentaire', '456'));
  
                  // Retour à la page d'accueil une fois que le nouvel article du blog a été ajouté.
