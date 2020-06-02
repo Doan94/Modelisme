@@ -59,7 +59,7 @@
                 <input type="text" id="country" name="country">
             </li>
             <li>
-                <label for="salesRepEmployeeNumber">Client :</label>
+                <label for="salesRepEmployeeNumber">Employé :</label>
                 <select id="salesRepEmployeeNumber" name="salesRepEmployeeNumber">
                     <?php foreach($employees as $employee): ?>
                         <option value="<?= intval($employee['employeeNumber']) ?>"><?= htmlspecialchars($employee['lastName']) ?> <?= htmlspecialchars($employee['firstName']) ?></option>
