@@ -62,7 +62,7 @@
                 <label for="employee">Client :</label>
                 <select id="employee" name="employee">
                     <?php foreach($employees as $employee): ?>
-                        <option value="<?= intval($employee['salesRepEmployeeNumber']) ?>"><?= htmlspecialchars($employee['lastName']) ?> <?= htmlspecialchars($employee['firstName']) ?></option>
+                        <option value="<?= intval($employee['employeeNumber']) ?>"><?= htmlspecialchars($employee['lastName']) ?> <?= htmlspecialchars($employee['firstName']) ?></option>
                     <?php endforeach ?>
                 </select>
             </li>
