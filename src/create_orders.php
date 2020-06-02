@@ -66,23 +66,23 @@ if(empty($_POST))
                 (?, ? ,?, ?, ?)
         ';
         
-        print_r($_POST['product'] . " ");
+        //print_r($_POST['product'] . " ");
 
-        print_r($_POST['orderNumber'] . " ");
+        //print_r($_POST['orderNumber'] . " ");
 
-        print_r($_POST['quantityOrdered'] . " ");
+        //print_r($_POST['quantityOrdered'] . " ");
 
-        print_r($_POST['priceEach'] . " ");
+        //print_r($_POST['priceEach'] . " ");
 
-        print_r($_POST['orderLineNumber'] . " ");
+        //print_r($_POST['orderLineNumber'] . " ");
 
         $resultSet4=$pdo->prepare($query4);
         $resultSet4->execute([$_POST['product'], $_POST['orderNumber'], $_POST['quantityOrdered'], $_POST['priceEach'],$_POST['orderLineNumber']]);
 
 
         // Retour à la page d'accueil une fois que le nouvel article du blog a été ajouté.
-        //header('Location: index.php');
-        //exit();
+        header('Location: index.php');
+        exit();
     }
 
 include 'templates/create_orders.php';
