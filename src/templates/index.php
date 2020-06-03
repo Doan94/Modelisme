@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+       <div class="navindex">
+            <a href="create_orders.php" class="button btn-warning">Creation de bon de commande</a></br>
+            <a href="create_customer.php" class="button btn-warning">Nouveau client</a></br>
+        </div>
+
     <section class="indexbody">
-    
-        <h1>Bons de commande</h1>
-        <a href="create_orders.php" class="button btn-warning">Creation de bon de commande</a></br>
-        <a href="create_customer.php" class="button btn-warning">Nouveau client</a></br>
         <table class="standard-table">
             <caption>Liste des commandes</caption>
             <thead>

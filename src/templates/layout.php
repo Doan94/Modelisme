@@ -10,17 +10,15 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
 
     <!-- Feuilles de style de l'application -->
-    <link rel="stylesheet" href="css/blog-main.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/ui-button.css">
-    <link rel="stylesheet" href="css/ui-form.css">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- En-tête commune de l'application -->
     <header>
         <div class='logotitre'>
             <img class='logo' src='./images/logoSa.png'>
-            <h1>Sudauto</h1>
+            <h1 class="namesite">SUDAUTO</h1>
         </div>
 
     </header>
@@ -34,12 +32,8 @@
 
     <!-- Pied de page commun de l'application -->
     <footer class="blogfooter">
-        <h5>Retrouvez nous:</h5>
-        <ul class="navfooter">
-            <li class="nav_item1"><a href="https://www.facebook.com/" target="_blank"><img src="./images/theme/facebooklogo.png" alt="fb"></a></li>
-            <li class="nav_item2"><a href="https://www.instagram.com/%22target=%22_blank%22%3E"><img src="./images/theme/instagramlogo.png" alt="insta"></a></li>
-            <li class="nav_item3"><a href="https://www.twitter.com/"><img src="./images/theme/twitterlogo.png" alt="twitter"></a></li>
-          </ul>
+        <p class="titrefooter">Notre Sîte:</p>
+        <a href="https//www.sudauto.com"><img class='logofooter' src='./images/logoSa.png'/></a>
     </footer>
         <!-- jQuery Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

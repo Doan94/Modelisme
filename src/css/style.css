@@ -1,9 +1,11 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
+@import 'https://fonts.googleapis.com/css?family=Amatic+SC|Dosis';
+
 
 
 a
 {
-    color: #7F3734;
+    color: rgb(212, 86, 81);
     text-decoration: none;
     transition: color 0.25s;
 }
@@ -42,22 +44,33 @@ html
 header
 {
     /* structure */
-    height: 128px;
+    height: 100px;
  
     /* presentation */
-    background-color: rgb(117, 243, 216);
+    background-color: rgb(144, 207, 176);
 
 }
 
 .logo
 {
-    width: 20%;
+    width: 10%;
     height: auto;
+    margin-left: 40%;
+  
 }
 
-h1
+.namesite
 {
-    color: #00968B;
+    color: rgb(8, 8, 8);
+    font-family: 'dosis', sans-serif;
+}
+
+.navindex
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(182, 253, 229);
 }
 
 .indexbody
@@ -98,16 +111,16 @@ h1
 .standard-table tbody tr:nth-child(even),
 .standard-table tfoot tr:nth-child(even)
 {
-    background-color: #DFE5DA;
+    background-color: rgb(246, 248, 244);
 }
 .standard-table tbody tr:nth-child(odd),
 .standard-table tfoot tr:nth-child(odd)
 {
-    background-color: #BABFB5;
+    background-color: rgb(210, 214, 206);
 }
 .standard-table tbody tr:hover
 {
-    background-color: #998882;
+    background-color: #a7a7a7;
     cursor: default;
 }
 .standard-table td,
@@ -128,4 +141,22 @@ h1
 .standard-table .money-column
 {
     text-align: right;
+}
+
+.blogfooter
+{
+    background-color:  rgb(144, 207, 176);
+    text-align: center;
+}
+
+.logofooter
+{
+    width: 10%;
+    height: auto;
+}
+
+.titrefooter
+{
+    font-size: 20px;
+    padding-top: 5Px;
 }
