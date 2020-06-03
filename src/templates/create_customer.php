@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>PHP</title>
-    <link rel="stylesheet" href="css/order-form.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <h2 class="indextitle" >Ajouter un nouveau client</h2>
 
