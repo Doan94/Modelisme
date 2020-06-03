@@ -71,4 +71,6 @@ $totalAmount = $result['totalAmount'];
 
 
 
-include 'templates/order-form.php';
+//include 'templates/order-form.php';
+$template = 'order-form';
+include 'templates/layout.php';

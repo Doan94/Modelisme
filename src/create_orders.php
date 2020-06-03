@@ -85,4 +85,6 @@ if(empty($_POST))
         exit();
     }
 
-include 'templates/create_orders.php';
+//include 'templates/create_orders.php';
+$template = 'create_orders';
+include 'templates/layout.php';

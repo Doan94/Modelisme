@@ -59,4 +59,6 @@ if(empty($_POST))
     }
 
 
-include 'templates/create_customer.php';
+//include 'templates/create_customer.php';
+$template = 'create_customer';
+include 'templates/layout.php';
