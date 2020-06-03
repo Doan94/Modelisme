@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>PHP</title>
-    <link rel="stylesheet" href="css/order-form.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section>
+    <section class="indexbody">
     
         <h1>Bons de commande</h1>
         <a href="create_orders.php" class="button btn-warning">Creation de bon de commande</a></br>
