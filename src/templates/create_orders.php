@@ -6,11 +6,11 @@
     <title>PHP</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<h2 class="indextitle" >Créer un bon de commande</h2>
+
 
 <!-- Formulaire de saisie d'un nouvel article -->
 <body>
-    <div class="bodyco">
+    <div class="indexbody">
         <form class="generic-form" action="create_orders.php" method="post">
             <fieldset>
                 <legend><i class="fa fa-sticky-note-o"></i> Nouveau bon de commande</legend>
@@ -54,7 +54,7 @@
                     </li>
                     <li>
                         <button class="button button-primary" type="submit">Enregistrer</button>
-                        <a class="button button-cancel" href="index.php">Annuler</a>
+                        <button class="button button-cancel" href="index.php">Annuler</button>
                     </li>
                 </ul>
             </fieldset>

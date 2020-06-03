@@ -59,6 +59,11 @@ header
   
 }
 
+body
+{
+    height: 100%;
+}
+
 .namesite
 {
     color: rgb(8, 8, 8);
@@ -73,11 +78,22 @@ header
     background-color: rgb(182, 253, 229);
 }
 
+ul
+{
+    list-style: none;
+}
+
+li
+{
+    margin-top: 20px;
+}
+
 .indexbody
 {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
 }
 
 .order-form-customer
@@ -89,12 +105,6 @@ header
     text-align: right;
 }
 
-.bodyco
-{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .standard-table
 {
@@ -167,8 +177,3 @@ header
     padding-top: 5Px;
 }
 
-.indextitle
-{
-    text-align: center;
-    padding-top: 20px;
-}
