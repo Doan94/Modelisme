@@ -48,4 +48,8 @@ $orders = $query->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-include 'templates/index.php';
+    //include 'templates/index.php';
+
+    // Sélection et affichage du template PHTML.
+    $template = 'index';
+    include 'templates/layout.php';
