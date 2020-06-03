@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le :  lun. 25 mai 2020 à 13:53
--- Version du serveur :  5.7.23
--- Version de PHP :  7.2.10
+-- Généré le :  mer. 03 juin 2020 à 21:46
+-- Version du serveur :  5.7.26
+-- Version de PHP :  7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -15,8 +15,8 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `classicmodels` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `classicmodels`;
+
 -- --------------------------------------------------------
---test
 
 --
 -- Structure de la table `customers`
@@ -164,7 +164,8 @@ INSERT INTO `customers` (`customerNumber`, `customerName`, `contactLastName`, `c
 (487, 'Signal Collectibles Ltd.', 'Taylor', 'Sue', '4155554312', '2793 Furth Circle', NULL, 'Brisbane', 'CA', '94217', 'USA', 1165, 60300),
 (489, 'Double Decker Gift Stores, Ltd', 'Smith', 'Thomas ', '(171) 555-7555', '120 Hanover Sq.', NULL, 'London', NULL, 'WA1 1DP', 'UK', 1501, 43300),
 (495, 'Diecast Collectables', 'Franco', 'Valarie', '6175552555', '6251 Ingle Ln.', NULL, 'Boston', 'MA', '51003', 'USA', 1188, 85100),
-(496, 'Kelly\'s Gift Shop', 'Snowden', 'Tony', '+64 9 5555500', 'Arenales 1938 3\'A\'', NULL, 'Auckland  ', NULL, NULL, 'New Zealand', 1612, 110000);
+(496, 'Kelly\'s Gift Shop', 'Snowden', 'Tony', '+64 9 5555500', 'Arenales 1938 3\'A\'', NULL, 'Auckland  ', NULL, NULL, 'New Zealand', 1612, 110000),
+(999, 'asxgxz', 'zecezc', 'czecezcze', '3345', 'cdzczdc', 'czczcz', 'czczczec', 'ssasczczcz', '45678', 'fervcerc', 1002, 234526);
 
 -- --------------------------------------------------------
 
@@ -262,6 +263,8 @@ CREATE TABLE `orderdetails` (
 --
 
 INSERT INTO `orderdetails` (`orderNumber`, `productCode`, `quantityOrdered`, `priceEach`, `orderLineNumber`) VALUES
+(1, 'S10_1678', 1, 1, 1),
+(1, 'S50_1514', 2, 1, 1),
 (10100, 'S18_1749', 30, 136, 3),
 (10100, 'S18_2248', 50, 55.09, 2),
 (10100, 'S18_4409', 22, 75.46, 4),
@@ -1746,10 +1749,10 @@ INSERT INTO `orderdetails` (`orderNumber`, `productCode`, `quantityOrdered`, `pr
 (10261, 'S700_3962', 50, 88.39, 6),
 (10261, 'S72_3212', 29, 43.68, 7),
 (10262, 'S18_1662', 49, 157.69, 9),
-(10262, 'S18_3029', 32, 81.72, 15),
-(10262, 'S18_3856', 34, 85.75, 14),
-(10262, 'S24_1785', 34, 98.48, 1);
+(10262, 'S18_3029', 32, 81.72, 15);
 INSERT INTO `orderdetails` (`orderNumber`, `productCode`, `quantityOrdered`, `priceEach`, `orderLineNumber`) VALUES
+(10262, 'S18_3856', 34, 85.75, 14),
+(10262, 'S24_1785', 34, 98.48, 1),
 (10262, 'S24_2841', 24, 63.71, 10),
 (10262, 'S24_3420', 46, 65.75, 11),
 (10262, 'S24_3816', 49, 82.18, 16),
@@ -3234,10 +3237,10 @@ INSERT INTO `orderdetails` (`orderNumber`, `productCode`, `quantityOrdered`, `pr
 (10421, 'S18_2795', 35, 167.06, 1),
 (10421, 'S24_2022', 40, 44.8, 2),
 (10422, 'S18_1342', 51, 91.44, 2),
-(10422, 'S18_1367', 25, 47.44, 1),
-(10423, 'S18_2949', 10, 89.15, 1),
-(10423, 'S18_2957', 31, 56.21, 3);
+(10422, 'S18_1367', 25, 47.44, 1);
 INSERT INTO `orderdetails` (`orderNumber`, `productCode`, `quantityOrdered`, `priceEach`, `orderLineNumber`) VALUES
+(10423, 'S18_2949', 10, 89.15, 1),
+(10423, 'S18_2957', 31, 56.21, 3),
 (10423, 'S18_3136', 21, 98.44, 2),
 (10423, 'S18_3320', 21, 80.36, 5),
 (10423, 'S24_4258', 28, 78.89, 4),
@@ -3259,7 +3262,9 @@ INSERT INTO `orderdetails` (`orderNumber`, `productCode`, `quantityOrdered`, `pr
 (10425, 'S24_2840', 31, 31.82, 5),
 (10425, 'S32_1268', 41, 83.79, 11),
 (10425, 'S32_2509', 11, 50.32, 6),
-(10425, 'S50_1392', 18, 94.92, 2);
+(10425, 'S50_1392', 18, 94.92, 2),
+(10435, 'S18_1342', 55, 55, 55),
+(10435, 'S32_3207', 44, 77, 77);
 
 -- --------------------------------------------------------
 
@@ -3282,6 +3287,7 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`, `status`, `comments`, `customerNumber`) VALUES
+(1, '2020-06-01', '2020-06-11', NULL, '1', NULL, 103),
 (10100, '2003-01-06', '2003-01-13', '2003-01-10', 'Shipped', NULL, 363),
 (10101, '2003-01-09', '2003-01-18', '2003-01-11', 'Shipped', 'Check on availability.', 128),
 (10102, '2003-01-10', '2003-01-18', '2003-01-14', 'Shipped', NULL, 181),
@@ -3607,7 +3613,16 @@ INSERT INTO `orders` (`orderNumber`, `orderDate`, `requiredDate`, `shippedDate`,
 (10422, '2005-05-30', '2005-06-11', NULL, 'In Process', NULL, 157),
 (10423, '2005-05-30', '2005-06-05', NULL, 'In Process', NULL, 314),
 (10424, '2005-05-31', '2005-06-08', NULL, 'In Process', NULL, 141),
-(10425, '2005-05-31', '2005-06-07', NULL, 'In Process', NULL, 119);
+(10425, '2005-05-31', '2005-06-07', NULL, 'In Process', NULL, 119),
+(10426, '2020-06-01', '2020-06-01', NULL, 'commentaire', NULL, 456),
+(10427, '2020-06-01', '2020-06-11', NULL, 'commentaire', NULL, 456),
+(10428, '2020-06-01', '2020-06-11', NULL, 'commentaire2', NULL, 125),
+(10429, '2020-06-01', '2020-06-11', NULL, 'test', NULL, 141),
+(10431, '2020-06-01', '2020-06-11', NULL, 'test2', NULL, 166),
+(10432, '2020-06-01', '2020-06-11', NULL, '2222', NULL, 119),
+(10433, '2020-06-01', '2020-06-11', NULL, '33', NULL, 144),
+(10434, '2020-06-01', '2020-06-11', NULL, '44', NULL, 131),
+(10435, '2020-06-01', '2020-06-11', NULL, '55', NULL, 141);
 
 -- --------------------------------------------------------
 
